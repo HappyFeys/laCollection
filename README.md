@@ -1,6 +1,8 @@
 # theCollection
  
  Lien vers la GitHub page : 
- https://happyfeys.github.io/theCollection/
+ https://happyfeys.github.io/laCollection/
+
+ 
 
  
