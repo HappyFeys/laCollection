@@ -1,0 +1,176 @@
+@mixin responsive($width) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    color: #f0f0f0;
+    background-image: url("https://happyfeys.github.io/theCollection/assets/img/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #0c0b0e;
+}
+
+header{
+    margin: 50px 20px;
+    width: 40%;
+    height: 25vh;
+    @include responsive(768px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    h1{
+        color: crimson;
+        font-size: 50px;
+       @include responsive(768px){
+        margin: auto;
+       }
+    }
+    #description{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        div{
+            display: flex;
+        }
+    }
+    img{
+        width: 22px;
+    }
+}
+
+main{
+    button{
+        margin: 20px 30px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: crimson;
+        color: #f0f0f0;
+        font-weight: 900;
+        border-radius: 20px;
+        border: 1px solid #f0f0f0;
+    }
+    //test
+    .card{
+        width: 200px;
+        height: fit-content;
+        background-color: #f7b500;
+
+        border: 2px solid #F7B600;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 50px;
+        color:#333;
+        font-weight: 600;
+        .btnDelete{
+            img{
+                width: 20px;
+                height: auto;
+            }
+        }
+        .titre{
+            font-weight: 900;
+            color: #f0f0f0;
+        }
+        .personnage{
+            width: 100%;
+            height: 150px;
+            background-position: center;
+            background-size: 175%;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 10px;
+            cursor: pointer;
+            .imgRole{
+                margin-top: 5px;
+                width: 35px;
+                height: 35px;
+                border: 1px solid #f0f0f0;
+                border-radius: 25px;
+                filter: saturate(150%);
+            }
+        }
+        .stat{
+            background-color: #f7b500;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 0 0 20px 20px;
+            
+            .info{
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                border-bottom: 1px solid #333;
+                padding: 5px;
+                .divInfo{
+                    width: 50%;
+                    text-align: center;
+                }
+                .imgClasse{
+                    width: 35px;
+                    border-radius: 35px;
+                    border: 1px solid #f0f0f0;
+                    
+                }
+            }
+            .score{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 10px;
+            }
+            .raid{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-top: 1px solid #333;
+                padding-top: 5px;
+                .raidDiv{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 5px;
+                    p{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+    width: 100%;
+    #officier, #roster{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    h2{
+        margin-left: 100px;
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
